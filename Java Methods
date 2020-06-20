@@ -4,6 +4,7 @@ You can pass data, known as parameters, into a method.
 Methods are used to perform certain actions, and they are also known as functions.
 Java provides some pre-defined methods, such as System.out.println().
 Methods are time savers and help us to reuse the code without retyping the code.
+A class has a unique method and if method with same names are there and different arguments that is called method overloading.
 
 ##########Method Declaration#############
 In general, method declarations has six components :
