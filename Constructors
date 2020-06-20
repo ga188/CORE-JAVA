@@ -1,0 +1,102 @@
+A Constructor is a block of code that intializes the newly created object.
+A constructor is like an instance method in java but does not have any return type.
+constructors are different from methods. construtcors have same name as class name but does not have any return type.
+A simple constructor program in java.
+
+
+public class Hello {
+   String name;
+   //Constructor
+   Hello(){
+      this.name = "BeginnersBook.com";
+   }
+   public static void main(String[] args) {
+      Hello obj = new Hello();
+      System.out.println(obj.name);
+   }
+}
+
+
+Types of Constructors
+There are three types of constructors: Default, No-arg constructor and Parameterized.
+
+####Default constructor#######
+
+If you do not implement any constructor in your class, Java compiler inserts a default constructor into your code on your behalf. This constructor is known as default constructor. You would not find it in your source code(the java file) as it would be inserted into the code during compilation and exists in .class file. 
+
+
+####no-arg constructor#######
+Constructor with no arguments is known as no-arg constructor. The signature is same as default constructor, however body can have any code unlike default constructor where the body of the constructor is empty.
+
+NOTE
+
+Although you may see some people claim that that default and no-arg constructor is same but in fact they are not, even if you write public Demo() { } in your class Demo it cannot be called default constructor since you have written the code of it
+
+#######Parameterized constructor###########
+
+Constructor with arguments(or you can say parameters) is known as Parameterized constructor.
+
+
+########Constructor Chaining#############
+
+When A constructor calls another constructor of same class then this is called constructor chaining.
+
+
+######Super()##########
+Whenever a child class constructor gets invoked it implicitly invokes the constructor of parent class. You can also say that the compiler inserts a super(); statement at the beginning of child class constructor.
+
+########Constructor Overloading#########
+Constructor overloading is a concept of having more than one constructor with different parameters list, in such a way so that each constructor performs a different task.
+
+
+#############################
+A copy constructor is used for copying the values of one object to another object.
+
+class JavaExample{  
+   String web; 
+   JavaExample(String w){  
+	web = w;
+   }  
+
+   /* This is the Copy Constructor, it 
+    * copies the values of one object
+    * to the another object (the object
+    * that invokes this constructor)
+    */
+   JavaExample(JavaExample je){  
+	web = je.web; 
+   }  
+   void disp(){
+	System.out.println("Website: "+web);
+   }  
+
+   public static void main(String args[]){  
+	JavaExample obj1 = new JavaExample("BeginnersBook");  
+		
+	/* Passing the object as an argument to the constructor
+	 * This will invoke the copy constructor
+	 */
+	JavaExample obj2 = new JavaExample(obj1);  
+	obj1.disp();  
+	obj2.disp();  
+   }  
+}
+
+
+
+Quick Recap
+Every class has a constructor whether it’s a normal class or a abstract class.
+Constructors are not methods and they don’t have any return type.
+Constructor name should match with class name .
+Constructor can use any access specifier, they can be declared as private also. Private constructors are possible in java but there scope is within the class only.
+Like constructors method can also have name same as class name, but still they have return type, though which we can identify them that they are methods not constructors.
+If you don’t implement any constructor within the class, compiler will do it for.
+this() and super() should be the first statement in the constructor code. If you don’t mention them, compiler does it for you accordingly.
+Constructor overloading is possible but overriding is not possible. Which means we can have overloaded constructor in our class but we can’t override a constructor.
+Constructors can not be inherited.
+If Super class doesn’t have a no-arg(default) constructor then compiler would not insert a default constructor in child class as it does in normal scenario.
+Interfaces do not have constructors.
+Abstract class can have constructor and it gets invoked when a class, which implements interface, is instantiated. (i.e. object creation of concrete class).
+A constructor can also invoke another constructor of the same class – By using this(). If you want to invoke a parameterized constructor then do it like this: this(parameter list).
+
+
