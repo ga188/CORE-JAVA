@@ -1,0 +1,39 @@
+A method is a collection of statements that perform some specific task and return the result to the caller.
+A method can perform some specific task without returning anything
+You can pass data, known as parameters, into a method.
+Methods are used to perform certain actions, and they are also known as functions.
+Java provides some pre-defined methods, such as System.out.println().
+Methods are time savers and help us to reuse the code without retyping the code.
+
+##########Method Declaration#############
+In general, method declarations has six components :
+
+--Modifier-:
+    Defines access type of the method i.e. from where it can be accessed in your application. In Java, there 4 type of the access specifiers.
+        public: accessible in all class in your application.
+        protected: accessible within the class in which it is defined and in its subclass(es)
+        private: accessible only within the class in which it is defined.
+        default (declared/defined without using any modifier) : accessible within same class and package within which its class is defined.
+---return type:
+      The data type of the value returned by the method or void if does not return a value.
+---Method Name: 
+      the rules for field names apply to method names as well, but the convention is a little different.
+---Parameter list: 
+      Comma separated list of the input parameters are defined, preceded with their data type, within the enclosed parenthesis. If there are no parameters, you must use empty parentheses ().
+---Exception list: 
+      The exceptions you expect by the method can throw, you can specify these exception(s).
+---Method body: 
+       it is enclosed between braces. The code you need to be executed to perform your intended operations.
+       
+       
+########Method signature:###########
+It consists of the method name and a parameter list (number of parameters, type of the parameters and order of the parameters). 
+Example
+ max(int x, int y)
+
+######Memory allocation for methods calls#############
+
+Methods calls are implemented through stack.
+Whenever a method is called a stack frame is created within the stack area and after that the arguments passed to and the local variables and value to be returned by this called method are stored in this stack frame and when execution of the called method is finished, the allocated stack frame would be deleted. 
+There is a stack pointer register that tracks the top of the stack which is adjusted accordingly.
+
