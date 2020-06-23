@@ -1,0 +1,85 @@
+Method Overloading is a feature that allows a class to have more than one method having the same name, differernt parameters list.
+
+
+Why method overloading in java?????????????
+The main advantage of this is cleanliness of code.
+Let's take the String.valueOf method. The overloaded versions of this method are defined as:
+
+static String valueOf(boolean b) 
+static String valueOf(char c) 
+static String valueOf(char[] data) 
+
+This means that if we have any type of variable, we can get a String representation of it by using String.valueOf(variable).
+
+If overloading was not allowed we'd have methods that look like this...
+
+static String valueOfBoolean(boolean b) 
+static String valueOfChar(char c) 
+static String valueOfCharArray(char[] data) 
+
+
+
+Lets play bak to the point,
+ when i say argument list it means the parameters taht a method has:
+ 
+ For example:-- the argument list of a method add(int a, int b) having two methods is diiferent from add(int a, int b, int c) ghaving 3 parameters.
+ 
+ 3 ways to overlaod 
+ 
+ differenrt no of parameters add(int a, int b, int c)
+ add (int a, int b)
+ 
+ different data types of parameters 
+ add(int a, float b)
+ add(float a, int b)
+ 
+ Sequence data types of parameters
+ add(int a, float b)
+ add(float a, int b)
+ 
+ Can we overload methods on return type?
+ No, we cannot overload methods on return type.
+ 
+ 
+ class A { 
+    public int foodEat(int a) { return 10; } 
+  
+    public char foodEat(int a, int b) { return 'a'; } 
+} 
+  
+public class Main { 
+  
+    public static void main(String args[]) 
+    { 
+        A a = new A(); 
+        System.out.println(a.foodEat(1)); 
+        System.out.println(a.foodEat(1, 2)); 
+    } 
+} 
+
+
+
+
+Can we overload static methods?
+Yes,We can have two ore more static methods with same name, but differences in input parameters.
+
+public class Test { 
+    public static void foodEat() { 
+        System.out.println("Test.foodEat() called "); 
+    } 
+    public static void foodEat(int a) {  
+        System.out.println("Test.foodEat(int) called "); 
+    } 
+    public static void main(String args[]) 
+    {  
+        Test.foodEat(); 
+        Test.foodEat(10); 
+    } 
+} 
+
+
+Can we overload methods that differ only by static keyword?
+No we will get complie time error, methods should be different in parameters list, than only method overloading can be performed.
+
+
+
