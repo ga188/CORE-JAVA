@@ -1,0 +1,48 @@
+What is Method Overriding?
+
+When we declare a method in child class with the same name(same parameters list) as present in parent class. That is called method ovverriding.
+Overriding is done so that a child class can give its own implementation to a method which is already provided by the parent class.
+The method present in parent class is known as overridden method and method present in child class is known overriding method.
+
+Real Time Example
+Suppose we have a HUman class as parent class and two child class named as Boy and Girl.
+Human has eat() method in it and botn the child classes must ovveride eat() method and both girl and boy can give thier own implementatiions.
+
+Advantage.
+The main advantage is we can use parent class methods in child class and can give our own implementations accordingly.
+
+#######Dynamic method dispatch
+The process in which call to overridden method is resolved at runtime is known as Dynamic method dsipatch.
+
+Rules of Method overriding
+1.
+It should have same name and same argument list(same type, same no, same sequence)
+
+2.
+Access modifier-- child class method should be less restrictive than parent class.
+For example a parent class has private method and child class overrides that method the overriding method in child class cannot have more restrictive modifier.
+coz there is no other modifier that is more restrictive than private modifier.
+
+Restrictive order is given below.
+
+private 
+default
+protected
+public
+
+Important points to remember---
+1. For class (or static or non overriding) methods, the method according to the type of reference is called, not according to the object being referred, which means method call is decided at compile time.
+
+2. For instance (or non-static) methods, the method is called according to the type of object being referred, not according to the type of reference, which means method calls is decided at run time.
+
+3. An instance method cannot override a static method, and a static method cannot hide an instance method. For example, the following program has two compiler errors.
+
+
+
+
+
+
+
+
+
+
